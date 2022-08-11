@@ -5,7 +5,7 @@
   "main": "frontend/src/index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start": "start-server -s ./frontend/build"
+    "start": "npm install && start-server -s ./frontend/build"
   },
   "engines": {
     "node": "16.x"

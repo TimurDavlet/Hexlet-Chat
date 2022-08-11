@@ -2,10 +2,13 @@
   "name": "frontend-project-lvl4",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/TimurDavlet/frontend-project-lvl4/workflows/hexlet-check/badge.svg)](https://github.com/TimurDavlet/frontend-project-lvl4/actions)",
-  "main": "index.js",
+  "main": "frontend/src/index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
     "start": "start-server -s ./frontend/build"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "repository": {
     "type": "git",

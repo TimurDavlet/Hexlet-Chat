@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import Loginpage from "./Components/Loginpage.jsx";
+export default App;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Switch>
+          <Route path="/login" component={Loginpage} />
+          <Route exact path="/">
+            <Redirect to="/login" />
+          </Route>
+          <Route path="/notfound">
+            <Notfound />
+          </Route>
+          <Redirect to="/notfound" />
+        </Switch>
+    </Router>
   );
 }
 
-export default App;
+function Login() {
+  return <h2>Login</h2>;
+}
+
+function Notfound() {
+  return <h2>404</h2>;
+}

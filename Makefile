@@ -6,3 +6,6 @@ start-backend:
 
 start-server:
 	npx start-server -s ./frontend/build
+
+build:
+	npm run build --prefix frontend

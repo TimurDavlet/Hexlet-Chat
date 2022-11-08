@@ -1,7 +1,7 @@
 const ruLocal = {
   ru: {
     translation: {
-      titlePage: 'Хекслет Чат',
+      titlePage: 'Hexlet Chat',
       button: {
         logOut: 'Выйти',
         logIn: 'Войти',

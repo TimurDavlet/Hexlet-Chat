@@ -1,7 +1,7 @@
 const enLocal = {
   en: {
     translation: {
-      titlePage: 'Chat',
+      titlePage: 'Hexlet Chat',
       button: {
         logOut: 'Log out',
         logIn: 'Login',

@@ -7,28 +7,29 @@ import AuthRequire from '../hoc/AuthRequire';
 import Chat from '../Components/Chat/Chat';
 import RegistrationForm from '../Components/Chat/Registration';
 import AuthRegistration from '../hoc/AuthRegistration';
+import routes from '../routes';
 
 const Main = () => (
   <Container className="h-100 overflow-hidden d-flex justify-content-center py-4">
     <Routes>
       <Route
-        path="/"
+        path={routes.chat()}
         element={(
           <AuthRequire>
             <Chat />
           </AuthRequire>
         )}
       />
-      <Route path="/login" element={<Authorization />} />
+      <Route path={routes.login()} element={<Authorization />} />
       <Route
-        path="/signup"
+        path={routes.signup()}
         element={(
           <AuthRegistration>
             <RegistrationForm />
           </AuthRegistration>
         )}
       />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path={routes.notFound()} element={<NotFoundPage />} />
     </Routes>
   </Container>
 );

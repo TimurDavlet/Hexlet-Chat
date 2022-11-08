@@ -58,6 +58,7 @@ const AuthorizationForm = () => {
         touched,
         handleSubmit,
         setFieldTouched,
+        isSubmitting,
       }) => (
         <WithTranslateFormErrors
           errors={errors}
@@ -65,20 +66,46 @@ const AuthorizationForm = () => {
           setFieldTouched={setFieldTouched}
         >
           <Form onSubmit={handleSubmit} className="w-75">
-            <UsernameInput
-              label={t('forms.username')}
-              name="username"
-              authFailed={authFailed}
-            />
-            <PasswordInput
-              label={t('forms.password')}
-              name="password"
-              authFailed={authFailed}
-              authFailedError={t('forms.authFailed')}
-            />
-            <Button variant="primary" type="submit" className="ms-auto">
-              {t('button.logIn')}
-            </Button>
+            {isSubmitting
+              ? (
+                <fieldset disabled>
+                  <UsernameInput
+                    label={t('forms.username')}
+                    name="username"
+                    authFailed={authFailed}
+                    active={isSubmitting ? 'disabled' : 'enable'}
+                  />
+                  <PasswordInput
+                    label={t('forms.password')}
+                    name="password"
+                    authFailed={authFailed}
+                    authFailedError={t('forms.authFailed')}
+                  />
+                  <Button variant="primary" type="submit" className="ms-auto">
+                    {t('button.logIn')}
+                  </Button>
+                </fieldset>
+              )
+              : (
+                <>
+                  <UsernameInput
+                    label={t('forms.username')}
+                    name="username"
+                    authFailed={authFailed}
+                    active={isSubmitting ? 'disabled' : 'enable'}
+                  />
+                  <PasswordInput
+                    label={t('forms.password')}
+                    name="password"
+                    authFailed={authFailed}
+                    authFailedError={t('forms.authFailed')}
+                  />
+                  <Button variant="primary" type="submit" className="ms-auto">
+                    {t('button.logIn')}
+                  </Button>
+                </>
+              )}
+
           </Form>
         </WithTranslateFormErrors>
       )}

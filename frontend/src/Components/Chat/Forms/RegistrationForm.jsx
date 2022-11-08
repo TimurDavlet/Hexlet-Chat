@@ -71,6 +71,7 @@ const RegistrationForm = () => {
         touched,
         handleSubmit,
         setFieldTouched,
+        isSubmitting,
       }) => (
         <WithTranslateFormErrors
           errors={errors}
@@ -78,29 +79,61 @@ const RegistrationForm = () => {
           setFieldTouched={setFieldTouched}
         >
           <Form onSubmit={handleSubmit} className="w-75">
-            <UsernameInput
-              label={t('forms.username')}
-              name="username"
-              authFailed={authFailed}
-            />
-            <PasswordInput
-              label={t('forms.password')}
-              name="password"
-              authFailed={authFailed}
-            />
-            <PasswordInput
-              label={t('forms.registration.confirmPassword')}
-              name="confirmPassword"
-              authFailed={authFailed}
-              authFailedError={t('forms.registration.existUser')}
-            />
-            <Button
-              variant="primary"
-              type="submit"
-              className="me-auto"
-            >
-              {t('forms.registration.button')}
-            </Button>
+            {isSubmitting
+              ? (
+                <fieldset disabled>
+                  <UsernameInput
+                    label={t('forms.username')}
+                    name="username"
+                    authFailed={authFailed}
+                  />
+                  <PasswordInput
+                    label={t('forms.password')}
+                    name="password"
+                    authFailed={authFailed}
+                  />
+                  <PasswordInput
+                    label={t('forms.registration.confirmPassword')}
+                    name="confirmPassword"
+                    authFailed={authFailed}
+                    authFailedError={t('forms.registration.existUser')}
+                  />
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="me-auto"
+                  >
+                    {t('forms.registration.button')}
+                  </Button>
+                </fieldset>
+              )
+              : (
+                <>
+                  <UsernameInput
+                    label={t('forms.username')}
+                    name="username"
+                    authFailed={authFailed}
+                  />
+                  <PasswordInput
+                    label={t('forms.password')}
+                    name="password"
+                    authFailed={authFailed}
+                  />
+                  <PasswordInput
+                    label={t('forms.registration.confirmPassword')}
+                    name="confirmPassword"
+                    authFailed={authFailed}
+                    authFailedError={t('forms.registration.existUser')}
+                  />
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="me-auto"
+                  >
+                    {t('forms.registration.button')}
+                  </Button>
+                </>
+              )}
           </Form>
         </WithTranslateFormErrors>
       )}

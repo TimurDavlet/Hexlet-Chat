@@ -3,9 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { Form } from 'react-bootstrap';
 import { useField } from 'formik';
 
-const UsernameInput = ({
-  authFailed, label, name,
-}) => {
+const UsernameInput = ({ authFailed, label, name }) => {
   const fieldUsername = useRef();
   const [field, meta] = useField({ name });
 
@@ -24,7 +22,6 @@ const UsernameInput = ({
         id={name}
         type="text"
         placeholder="..."
-        ref={fieldUsername}
         {...field}
         isInvalid={
           (meta.touched && meta.error) || authFailed

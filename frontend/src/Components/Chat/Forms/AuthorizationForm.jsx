@@ -43,15 +43,14 @@ const AuthorizationForm = () => {
       }
     }
   };
-
   return (
     <Formik
       initialValues={{
         username: '',
         password: '',
       }}
-      validationSchema={schema}
       onSubmit={handleSubmitForm}
+      validationSchema={schema}
     >
       {({
         errors,

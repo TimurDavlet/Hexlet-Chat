@@ -34,9 +34,9 @@ const ruLocal = {
         removeChannel: 'Удалить',
         renameChannel: 'Переименовать',
         messages: 'Сообщения',
-        placeholderMessage: 'Напишите сообщение',
+        placeholderMessage: 'Введите сообщение',
         send: 'Отправить',
-        countMessages: 'Количество сообщений:',
+        countMessages: 'сообщений',
       },
       modal: {
         renameChannel: 'Переименовать канал',

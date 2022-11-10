@@ -39,8 +39,8 @@ export default function Messages({ isMobilePage, openChannelPage }) {
           </div>
         )}
         <div>
-          <h3>{`#${editCurrentChannelName}`}</h3>
-          <span>{`${t('chat.countMessages')} ${countMessages}`}</span>
+          <h3>{`# ${editCurrentChannelName}`}</h3>
+          <span>{`${countMessages} ${t('chat.countMessages')}`}</span>
         </div>
       </div>
       <div className="h-100 d-flex flex-column overflow-hidden bg-white">

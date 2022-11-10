@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import { useField } from 'formik';
 
 const ModalInput = React.forwardRef(({
-  status, name,
+  label, status, name,
 }, ref) => {
   const [field, meta] = useField({ name });
 
@@ -18,6 +18,7 @@ const ModalInput = React.forwardRef(({
         disabled={status === 'pending'}
         autoComplete="off"
       />
+      <Form.Label className="visually-hidden">{label}</Form.Label>
       <Form.Control.Feedback type="invalid">
         {meta.error}
       </Form.Control.Feedback>

@@ -10,12 +10,11 @@ const PasswordInput = ({
 
   return (
     <Form.Group className="mb-3">
-      <Form.Label htmlFor={name}>{label}</Form.Label>
       <Form.Control
         id={name}
         name={name}
         type="password"
-        placeholder="..."
+        placeholder={label}
         {...field}
         isInvalid={
           (meta.touched && meta.error) || authFailed

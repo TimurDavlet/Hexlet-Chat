@@ -68,7 +68,6 @@ const InitialState = async () => {
 
   socket.on('newChannel', (payload) => {
     store.dispatch(addChannel(payload));
-    store.dispatch(selectActiveChat(payload.id));
   });
 
   socket.on('newMessage', (payload) => {

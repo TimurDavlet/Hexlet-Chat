@@ -7,13 +7,13 @@ const ruLocal = {
         logIn: 'Войти',
       },
       forms: {
-        username: 'Имя пользователя',
+        username: 'Ваш ник',
         password: 'Пароль',
         authFailed: 'Неверные имя пользователя или пароль',
         requiredName: 'Требуется имя',
         requiredPassword: 'Требуется пароль',
         authorization: {
-          title: 'Авторизация',
+          title: 'Войти',
           footerText: 'Нет аккаунта?',
           link: 'Регистрация',
         },
@@ -36,7 +36,6 @@ const ruLocal = {
         placeholderMessage: 'Напишите сообщение',
         send: 'Отправить',
         countMessages: 'Количество сообщений:',
-        test: 'test',
       },
       modal: {
         renameChannel: 'Переименовать канал',

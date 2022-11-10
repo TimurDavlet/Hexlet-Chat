@@ -4,9 +4,8 @@ import { Form } from 'react-bootstrap';
 import { useField } from 'formik';
 
 const UsernameInput = ({ authFailed, label, name }) => {
-  const fieldUsername = useRef();
+  const fieldUsername = useRef(null);
   const [field, meta] = useField({ name });
-
   useEffect(() => {
     if (fieldUsername.current) {
       fieldUsername.current.focus();
@@ -15,13 +14,10 @@ const UsernameInput = ({ authFailed, label, name }) => {
 
   return (
     <Form.Group className="mb-3">
-      <Form.Label htmlFor={name}>
-        {label}
-      </Form.Label>
       <Form.Control
         id={name}
         type="text"
-        placeholder="..."
+        placeholder={label}
         {...field}
         isInvalid={
           (meta.touched && meta.error) || authFailed

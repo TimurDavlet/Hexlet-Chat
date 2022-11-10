@@ -18,7 +18,7 @@ const ruLocal = {
           link: 'Регистрация',
         },
         registration: {
-          title: 'Форма регистрации',
+          title: 'Регистрация',
           notMatchPassword: 'Пароли должны совпадать',
           minPassword: 'Не менее 6 символов',
           minName: 'От 3 до 20 символов',
@@ -26,6 +26,7 @@ const ruLocal = {
           existUser: 'Такой пользователь уже существует',
           confirmPassword: 'Подтвердите пароль',
           button: 'Зарегистрироваться',
+          username: 'Имя пользователя',
         },
       },
       chat: {

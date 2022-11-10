@@ -42,7 +42,7 @@ const ruLocal = {
       modal: {
         renameChannel: 'Переименовать канал',
         deleteChannel: 'Удалить канал',
-        createChannel: 'Имя канала',
+        createChannel: 'Добавить канал',
         nameChannel: 'Имя канала',
         deleteBody: 'Уверены?',
         newName: 'Новое имя',

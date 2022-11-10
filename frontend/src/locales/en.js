@@ -36,7 +36,6 @@ const enLocal = {
         placeholderMessage: 'Write a message',
         send: 'Send',
         countMessages: 'Count messages:',
-        test: 'test',
       },
       modal: {
         renameChannel: 'Rename channel',

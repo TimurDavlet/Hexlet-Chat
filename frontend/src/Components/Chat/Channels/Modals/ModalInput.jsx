@@ -4,13 +4,12 @@ import { Form } from 'react-bootstrap';
 import { useField } from 'formik';
 
 const ModalInput = React.forwardRef(({
-  label, status, name,
+  status, name,
 }, ref) => {
   const [field, meta] = useField({ name });
 
   return (
     <Form.Group className="mb-3">
-      <Form.Label>{label}</Form.Label>
       <Form.Control
         id={name}
         type="text"

@@ -14,10 +14,13 @@ const UsernameInput = ({ authFailed, label, name }) => {
 
   return (
     <Form.Group className="mb-3">
+      <Form.Label htmlFor={name}>
+        {label}
+      </Form.Label>
       <Form.Control
         id={name}
         type="text"
-        placeholder={label}
+        placeholder="..."
         {...field}
         isInvalid={
           (meta.touched && meta.error) || authFailed

@@ -10,7 +10,6 @@ const ModalInput = React.forwardRef(({
 
   return (
     <Form.Group className="mb-3">
-      <Form.Label className="visually-hidden" for={name}>{label}</Form.Label>
       <Form.Control
         id={name}
         type="text"
@@ -19,6 +18,7 @@ const ModalInput = React.forwardRef(({
         disabled={status === 'pending'}
         autoComplete="off"
       />
+      <Form.Label className="visually-hidden" for={name}>{label}</Form.Label>
       <Form.Control.Feedback type="invalid">
         {meta.error}
       </Form.Control.Feedback>

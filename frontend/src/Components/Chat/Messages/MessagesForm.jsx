@@ -54,6 +54,7 @@ const MessagesForm = React.forwardRef((_, ref) => {
               ref={ref}
               disabled={isSubmitting}
               autoComplete="off"
+              aria-label={t('chat.lable')}
             />
             <Button
               variant="primary"

@@ -55,7 +55,6 @@ const CreateChannelModal = ({ closeModal }) => {
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <ModalInput
-                label={t('modal.nameChannel')}
                 name="channelName"
                 ref={ref}
                 status={status}

@@ -12,6 +12,7 @@ const ruLocal = {
         authFailed: 'Неверные имя пользователя или пароль',
         requiredName: 'Требуется имя',
         requiredPassword: 'Требуется пароль',
+        required: 'Обязательное поле',
         authorization: {
           title: 'Войти',
           footerText: 'Нет аккаунта?',

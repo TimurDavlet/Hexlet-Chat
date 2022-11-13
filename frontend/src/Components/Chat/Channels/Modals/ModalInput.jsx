@@ -17,11 +17,14 @@ const ModalInput = React.forwardRef(({
         {...field}
         disabled={status === 'pending'}
         autoComplete="off"
+        isInvalid={
+          (meta.touched && meta.error) || false
+        }
       />
-      <Form.Label className="visually-hidden">{label}</Form.Label>
       <Form.Control.Feedback type="invalid">
         {meta.error}
       </Form.Control.Feedback>
+      <Form.Label className="visually-hidden">{label}</Form.Label>
     </Form.Group>
   );
 });

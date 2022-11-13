@@ -51,7 +51,7 @@ const ruLocal = {
         rename: 'Переименовать',
         delete: 'Удалить',
         create: 'Отправить',
-        channelExist: 'Такой канал уже существует',
+        channelExist: 'Должно быть уникальным',
         requiredField: 'Обязательное поле',
       },
       loading: 'Загрузка...',

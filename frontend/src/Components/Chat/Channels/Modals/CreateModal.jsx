@@ -23,6 +23,14 @@ const CreateChannelModal = ({ closeModal }) => {
     }
   }, []);
 
+  /* const schema = yup.object().shape({
+    username: yup
+      .string()
+      .min(3, t('forms.registration.minName'))
+      .max(20, t('forms.registration.maxName'))
+      .required(t('forms.requiredName'))
+  }); */
+
   const handleSubmitForm = async ({ channelName }) => {
     try {
       await dispatch(createChannelRequest({ name: channelName.trim() })).unwrap();

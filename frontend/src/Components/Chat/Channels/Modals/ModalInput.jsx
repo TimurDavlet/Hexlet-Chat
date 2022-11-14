@@ -29,4 +29,6 @@ const ModalInput = React.forwardRef(({
   );
 });
 
+ModalInput.displayName = 'ModalInput';
+
 export default ModalInput;

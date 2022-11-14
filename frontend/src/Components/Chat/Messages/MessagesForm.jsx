@@ -70,4 +70,6 @@ const MessagesForm = React.forwardRef((_, ref) => {
   );
 });
 
+MessagesForm.displayName = 'MessagesForm';
+
 export default MessagesForm;

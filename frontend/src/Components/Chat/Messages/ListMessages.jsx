@@ -24,4 +24,6 @@ const ListMessages = React.forwardRef(({
   </div>
 ));
 
+ListMessages.displayName = 'ListMessages';
+
 export default ListMessages;

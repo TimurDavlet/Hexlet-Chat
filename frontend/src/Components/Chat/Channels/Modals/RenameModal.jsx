@@ -49,7 +49,7 @@ const RenameChannelModal = ({ closeModal }) => {
           initialValues={{
             channelName: currentNameChannel,
           }}
-          validationSchema={getModalValidationSchema(channelsNames)}
+          validationSchema={getModalValidationSchema(channelsNames, t('modal.requiredField'), t('modal.channelExist'))}
           onSubmit={handleSubmitForm}
           validateOnChange={false}
           validateOnBlur={false}
@@ -57,7 +57,7 @@ const RenameChannelModal = ({ closeModal }) => {
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <ModalInput
-                label={t('modal.renameChannel')}
+                label={t('modal.nameChannel')}
                 name="channelName"
                 ref={ref}
                 status={status}

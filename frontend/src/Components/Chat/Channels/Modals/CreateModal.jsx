@@ -26,8 +26,8 @@ const CreateChannelModal = ({ closeModal }) => {
   const handleSubmitForm = async ({ channelName }) => {
     try {
       await dispatch(createChannelRequest({ name: channelName.trim() })).unwrap();
-      closeModal();
       toast.success(t('notify.createChannel'));
+      closeModal();
     } catch {
       toast.error(t('error.createChannel'));
     }
@@ -47,7 +47,7 @@ const CreateChannelModal = ({ closeModal }) => {
           initialValues={{
             channelName: '',
           }}
-          validationSchema={getModalValidationSchema(channelsNames)}
+          validationSchema={getModalValidationSchema(channelsNames, t('modal.requiredField'), t('modal.channelExist'))}
           onSubmit={handleSubmitForm}
           validateOnChange={false}
           validateOnBlur={false}

@@ -10,7 +10,6 @@ const ModalInput = React.forwardRef(({
 
   return (
     <Form.Group className="mb-3">
-      <Form.Label>{label}</Form.Label>
       <Form.Control
         id={name}
         type="text"
@@ -18,12 +17,18 @@ const ModalInput = React.forwardRef(({
         {...field}
         disabled={status === 'pending'}
         autoComplete="off"
+        isInvalid={
+          (meta.touched && meta.error) || false
+        }
       />
       <Form.Control.Feedback type="invalid">
         {meta.error}
       </Form.Control.Feedback>
+      <Form.Label className="visually-hidden" htmlFor={name}>{label}</Form.Label>
     </Form.Group>
   );
 });
+
+ModalInput.displayName = 'ModalInput';
 
 export default ModalInput;

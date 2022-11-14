@@ -13,7 +13,7 @@ const enLocal = {
         requiredName: 'Name required',
         requiredPassword: 'Password required',
         authorization: {
-          title: 'Authorization',
+          title: 'Login',
           footerText: 'Don\'t have an account?',
           link: 'Registration',
         },

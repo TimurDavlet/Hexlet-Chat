@@ -110,7 +110,7 @@ const RegistrationForm = () => {
               : (
                 <>
                   <UsernameInput
-                    label={t('forms.username')}
+                    label={t('forms.registration.username')}
                     name="username"
                     authFailed={authFailed}
                   />

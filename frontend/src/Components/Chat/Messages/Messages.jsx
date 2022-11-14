@@ -15,6 +15,8 @@ export default function Messages({ isMobilePage, openChannelPage }) {
   const refInputMessage = useRef();
   const refWindowMessages = useRef();
   const currentChannelName = getCurrentChannelName(channels, currentChannelId);
+  const editCurrentChannelNameDesktop = currentChannelName.length > 20 ? `${currentChannelName.slice(0, 20)}...` : currentChannelName;
+  const editCurrentChannelNameMobile = currentChannelName.length > 15 ? `${currentChannelName.slice(0, 15)}...` : currentChannelName;
   const countMessages = getCountMessages(entities, ids, currentChannelId);
 
   useEffect(() => {
@@ -38,8 +40,8 @@ export default function Messages({ isMobilePage, openChannelPage }) {
           </div>
         )}
         <div>
-          <h3>{`#${currentChannelName}`}</h3>
-          <span>{`${t('chat.countMessages')} ${countMessages}`}</span>
+          <h3>{`# ${isMobilePage ? editCurrentChannelNameDesktop : editCurrentChannelNameMobile}`}</h3>
+          <span>{`${countMessages} ${t('chat.countMessages')}`}</span>
         </div>
       </div>
       <div className="h-100 d-flex flex-column overflow-hidden bg-white">

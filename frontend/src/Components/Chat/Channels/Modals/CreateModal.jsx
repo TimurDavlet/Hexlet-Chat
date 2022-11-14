@@ -23,19 +23,11 @@ const CreateChannelModal = ({ closeModal }) => {
     }
   }, []);
 
-  /* const schema = yup.object().shape({
-    username: yup
-      .string()
-      .min(3, t('forms.registration.minName'))
-      .max(20, t('forms.registration.maxName'))
-      .required(t('forms.requiredName'))
-  }); */
-
   const handleSubmitForm = async ({ channelName }) => {
     try {
       await dispatch(createChannelRequest({ name: channelName.trim() })).unwrap();
-      closeModal();
       toast.success(t('notify.createChannel'));
+      closeModal();
     } catch {
       toast.error(t('error.createChannel'));
     }
@@ -55,7 +47,7 @@ const CreateChannelModal = ({ closeModal }) => {
           initialValues={{
             channelName: '',
           }}
-          validationSchema={getModalValidationSchema(channelsNames)}
+          validationSchema={getModalValidationSchema(channelsNames, t('modal.requiredField'), t('modal.channelExist'))}
           onSubmit={handleSubmitForm}
           validateOnChange={false}
           validateOnBlur={false}

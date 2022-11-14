@@ -53,6 +53,7 @@ const ruLocal = {
         create: 'Отправить',
         channelExist: 'Должно быть уникальным',
         requiredField: 'Обязательное поле',
+        management: 'Управление каналом',
       },
       loading: 'Загрузка...',
       notify: {

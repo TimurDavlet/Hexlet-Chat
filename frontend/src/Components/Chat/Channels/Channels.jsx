@@ -59,7 +59,9 @@ const Channels = ({ openMessagePage, isMobilePage }) => {
                     split
                     variant={selectColorActiveChat(id, currentChannelId)}
                     id="dropdown-custom-2"
-                  />
+                  >
+                    <span className="visually-hidden">{t('modal.management')}</span>
+                  </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item as="button" onClick={handleOpenModal('deleteChannel', id)}>
                       {t('chat.removeChannel')}

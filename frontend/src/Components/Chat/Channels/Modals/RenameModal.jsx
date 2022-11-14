@@ -57,7 +57,7 @@ const RenameChannelModal = ({ closeModal }) => {
           {({ handleSubmit }) => (
             <Form onSubmit={handleSubmit}>
               <ModalInput
-                label={t('modal.renameChannel')}
+                label={t('modal.nameChannel')}
                 name="channelName"
                 ref={ref}
                 status={status}

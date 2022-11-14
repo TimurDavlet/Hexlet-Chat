@@ -58,7 +58,7 @@ const ruLocal = {
       loading: 'Загрузка...',
       notify: {
         createChannel: 'Канал создан',
-        deleteChannel: 'Канал удален',
+        deleteChannel: 'Канал удалён',
         renameChannel: 'Канал переименован',
         error: 'Произошла ошибка, пожалуйста, повторите попытку',
       },

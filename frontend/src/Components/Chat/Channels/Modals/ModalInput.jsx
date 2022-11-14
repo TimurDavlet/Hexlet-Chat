@@ -24,7 +24,7 @@ const ModalInput = React.forwardRef(({
       <Form.Control.Feedback type="invalid">
         {meta.error}
       </Form.Control.Feedback>
-      <Form.Label className="visually-hidden">{label}</Form.Label>
+      <Form.Label className="visually-hidden" htmlFor={name}>{label}</Form.Label>
     </Form.Group>
   );
 });

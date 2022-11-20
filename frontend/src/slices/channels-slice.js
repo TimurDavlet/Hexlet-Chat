@@ -60,10 +60,15 @@ const channelsSlice = createSlice({
   initialState,
   reducers: {
     addChannel: (state, action) => {
-      const { id } = action.payload;
+      const dataFromLocalStorage = localStorage.getItem('userId');
+      const { username } = JSON.parse(dataFromLocalStorage);
+      const { id, author } = action.payload;
       state.entities[id] = { ...action.payload };
       if (!state.ids.includes(id)) {
         state.ids.push(id);
+      }
+      if (username === author) {
+        state.currentChannelId = id;
       }
     },
     renameChannel: (state, action) => {

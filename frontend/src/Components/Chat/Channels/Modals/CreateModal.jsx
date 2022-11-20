@@ -25,7 +25,9 @@ const CreateChannelModal = ({ closeModal }) => {
 
   const handleSubmitForm = async ({ channelName }) => {
     try {
-      await dispatch(createChannelRequest({ name: channelName.trim() })).unwrap();
+      const dataFromLocalStorage = localStorage.getItem('userId');
+      const { username } = JSON.parse(dataFromLocalStorage);
+      await dispatch(createChannelRequest({ name: channelName.trim(), author: username })).unwrap();
       toast.success(t('notify.createChannel'));
       closeModal();
     } catch {
